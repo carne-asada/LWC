@@ -1,0 +1,40 @@
+h2{
+            text-align: center;
+            width: 80%;
+        }
+
+.list-view{
+    table{
+        border: 1px solid #ddd;
+        border-collapse: collapse;
+        width: 80%;
+    }
+    tr,th,td{
+        padding: 1em;
+        font-size: 12px;
+        border: 1px solid #ddd;   
+    }
+    thead tr th{
+        text-align: center;
+        background-color: rgb(107, 215, 251);
+    }
+    tr:hover{
+        background-color: lightgray;
+    }
+}
+
+.text-align-right{
+    text-align: right;
+}
+
+.text-color-orange{
+    color: orange;
+}
+
+.text-color-green{
+    color: green;
+}
+
+.text-color-red{
+    color: red;
+}
