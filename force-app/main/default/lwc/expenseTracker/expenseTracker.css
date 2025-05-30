@@ -1,0 +1,22 @@
+.outline{
+    table{
+        border: 1px solid #ddd;
+        border-collapse: collapse;
+        width: 90%;
+    }
+    tr,th,td{
+        padding: 1em;
+        font-size: 12px;
+        border: 1px solid #ddd;   
+    }
+    thead tr th{
+        text-align: center;
+        background-color: rgb(18, 254, 93);
+    }
+    tr {
+        background-color: white;
+    }
+    tr:hover{
+        background-color: lightgray;
+    }
+}
