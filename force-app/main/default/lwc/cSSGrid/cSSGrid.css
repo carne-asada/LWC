@@ -1,0 +1,46 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}    
+
+.grid-container {
+display: grid;
+grid-template-columns: auto auto auto;
+gap: 20px;
+padding: 15px;
+}
+
+.card{
+    background-color: #f1f1f1;
+    color:#000;
+    padding: 30px;
+    border: 1px solid #ccc;
+    text-align: center;
+
+        .text-title{
+            font-size: 20px;
+            font-weight: bold;
+            padding: 3px;
+        }
+        .text-value{
+            font-size: 40px;
+            color: blue;
+            font-weight: bold;
+            padding: 3px;
+        }
+        .text-desciption{
+            font-size: 15px;
+            padding: 3px;
+        }
+}
+
+.item1 {grid-area: 1 / 1;}
+.item2 {grid-area: 1 / 2;}
+.item3 {grid-area: 2 / 1;}
+.item4 {grid-area: 2 / 2;}
+
+@media only screen and (max-width: 600px) {
+    .item1 {grid-area: 1 / span 2;}
+    .item2 {grid-area: 2 / span 2;}
+    .item3 {grid-area: 3 / span 2;}
+    .item4 {grid-area: 4 / span 2;}
+}
