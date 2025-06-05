@@ -2,44 +2,21 @@
     <div class="list-view">
         <table>
             <thead>
-                <tr>
-                    <th>{column1}</th>
-                    <th>{column2}</th>
-                    <th>{column3}</th>
-                    <th>{column4}</th>
-                </tr>
+                    <tr>
+                        <template for:each={columns} for:item="column">
+                        <th key={column.name}>{column.name}</th>
+                        </template>
+                    </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>{opp1.name}</td>
-                    <td class="text-color-orange">{opp1.stage}</td>
-                    <td class="text-align-right">{opp1.amount}</td>
-                    <td>{opp1.closedate}</td>
-                </tr>
-                <tr>
-                    <td>{opp2.name}</td>
-                    <td class="text-color-green">{opp2.stage}</td>
-                    <td class="text-align-right">{opp2.amount}</td>
-                    <td>{opp2.closedate}</td>
-                </tr>
-                <tr>
-                    <td>{opp3.name}</td>
-                    <td class="text-color-red">{opp3.stage}</td>
-                    <td class="text-align-right">{opp3.amount}</td>
-                    <td>{opp3.closedate}</td>
-                </tr>
-                <tr>
-                    <td>{opp4.name}</td>
-                    <td>{opp4.stage}</td>
-                    <td class="text-align-right">{opp4.amount}</td>
-                    <td>{opp4.closedate}</td>
-                </tr>
-                <tr>
-                    <td>{opp5.name}</td>
-                    <td>{opp5.stage}</td>
-                    <td class="text-align-right">{opp5.amount}</td>
-                    <td>{opp5.closedate}</td>
-                </tr>
+                <template for:each={opportunities} for:item="opportunity">
+                    <tr key={opportunity.id}>
+                        <td>{opportunity.name}</td>
+                        <td class="text-color-orange">{opportunity.stage}</td>
+                        <td class="text-align-right">{opportunity.amount}</td>
+                        <td>{opportunity.closedate}</td>
+                    </tr>
+                </template>
             </tbody>
         </table>
     </div>
