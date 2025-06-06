@@ -3,10 +3,11 @@ import { LightningElement } from 'lwc';
 export default class SimpleTable extends LightningElement {
 
 columns = [ 
-    {name: 'Opportunity Name'},
-    {name: 'Stage'},
-    {name: 'Amount'},
-    {name: 'Close Date'}];
+    {label: 'Opportunity Name', fieldName : 'name'},
+    {label: 'Stage', fieldName : 'stage'},
+    {label: 'Amount', fieldName : 'amount'},
+    {label: 'Close Date', fieldName : 'closedate'}
+];
 
 
 
