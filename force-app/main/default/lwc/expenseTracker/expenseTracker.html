@@ -1,23 +1,10 @@
 <template>
-    <div class="outline">
-        <table>
-            <thead>
-                <tr>
-                    <template for:each={columns} for:item="column">
-                        <th key={column.columnName}>{column.columnName}</th>
-                    </template>
-                </tr>
-            </thead>
-            <tbody>
-                <template for:each={expenses} for:item="expense">
-                    <tr key={expense.name}>
-                        <td>{expense.name}</td>
-                        <td>{expense.category}</td>
-                        <td>{expense.amount}</td>
-                        <td>{expense.date}</td>
-                    </tr>
-                </template>
-            </tbody>
-        </table>
+    <div>
+                <lightning-datatable
+                key-field="id"
+                data={expenses}
+                columns={columns}
+                hide-checkbox-column>
+        </lightning-datatable>
     </div>
 </template>
